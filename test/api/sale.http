@@ -1,0 +1,67 @@
+### Get sales
+POST http://localhost:9000/sale/get
+content-type: application/json
+
+{}
+
+### Save sale
+POST http://localhost:9000/sale/save
+content-type: application/json
+
+{
+    "products":[
+        { 
+            "quantity":10,
+            "product":"5b9ec02905adfe38102205c1"
+        },
+        { 
+            "quantity":5,
+            "product":"5b9ec19bf30a0d3c6038bacd"
+        }
+    ],
+    "description":"Venta del pan de Papa",
+    "subtotal":83.00,
+    "total":83.00
+}
+
+### Update sale
+POST http://localhost:9000/sale/update/5b9ed0141fada8102c5b2b1a
+content-type: application/json
+
+{
+    "products":[
+        { 
+            "quantity":10,
+            "product":"5b9ec02905adfe38102205c1"
+        },
+        { 
+            "quantity":5,
+            "product":"5b9ec19bf30a0d3c6038bacd"
+        }
+    ],
+    "description":"Venta del pan de Papa",
+    "subtotal":83.00,
+    "total":83.00,
+    "active": true
+}
+
+### Delete sale
+POST http://localhost:9000/sale/delete/5b9ed0141fada8102c5b2b1a
+content-type: application/json
+
+{
+    "products":[
+        { 
+            "quantity":10,
+            "product":"5b9ec02905adfe38102205c1"
+        },
+        { 
+            "quantity":5,
+            "product":"5b9ec19bf30a0d3c6038bacd"
+        }
+    ],
+    "description":"Venta del pan de Papa",
+    "subtotal":83.00,
+    "total":83.00
+}
+

@@ -1,0 +1,40 @@
+### Get products
+POST http://localhost:9000/product/get
+content-type: application/json
+
+{}
+
+### Save product
+POST http://localhost:9000/product/save
+content-type: application/json
+
+{
+    "name":"Bolillo",
+    "description":"Bolillo o Telera",
+    "cost":1,
+    "price":1.50
+}
+
+### Update product
+POST http://localhost:9000/product/update/5b9ec02905adfe38102205c1
+content-type: application/json
+
+{
+    "name": "Pan de dulce",
+    "description": "Pan chico",
+    "cost": 3,
+    "price": 4,
+    "active":true
+}
+
+### Delete product
+POST http://localhost:9000/product/delete/5b9ec79329150b0474d1115d
+content-type: application/json
+
+{
+    "name":"Pan de dulce",
+    "description":"Pan chico",
+    "cost":3.50,
+    "price":5.30
+}
+
